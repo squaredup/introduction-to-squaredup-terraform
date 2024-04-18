@@ -1,0 +1,79 @@
+{
+    "_type": "layout/grid",
+    "contents": [
+      {
+        "w": 4,
+        "h": 3,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "i": "1",
+        "moved": false,
+        "static": false,
+        "config": {
+          "title": "Available Memory Bytes",
+          "description": "supportVM Available Memory, 30 days fixed",
+          "_type": "tile/data-stream",
+          "dataStream": {
+            "name": "availableMemoryBytes",
+            "pluginConfigId": "{{plugin_config_id}}"
+          },
+          "visualisation": {
+            "type": "data-stream-line-graph"
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_6TWdMU2XsFyM7H9yl4eF))",
+            "bindings": {
+              "ids_6TWdMU2XsFyM7H9yl4eF": [
+                "{{support_vm_node_id}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{support_vm_node_id}}"
+              ]
+            }
+          },
+          "timeframe": "last30days"
+        }
+      },
+      {
+        "w": 4,
+        "h": 3,
+        "x": 0,
+        "y": 3,
+        "z": 0,
+        "i": "6d112af9-f10e-4341-91c3-4c8db0076356",
+        "moved": false,
+        "static": false,
+        "config": {
+          "title": "Percentage CPU",
+          "description": "supportVM CPU, 30 days fixed",
+          "_type": "tile/data-stream",
+          "dataStream": {
+            "name": "percentageCpu",
+            "pluginConfigId": "{{plugin_config_id}}"
+          },
+          "visualisation": {
+            "type": "data-stream-line-graph"
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_KP4r9OKnvYNfVbl7sVan))",
+            "bindings": {
+              "ids_KP4r9OKnvYNfVbl7sVan": [
+                "{{support_vm_node_id}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{support_vm_node_id}}"
+              ]
+            }
+          },
+          "timeframe": "last30days"
+        }
+      }
+    ],
+    "columns": 4,
+    "version": 7
+  }

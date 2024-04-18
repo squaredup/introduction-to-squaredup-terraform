@@ -1,0 +1,98 @@
+{
+    "_type": "layout/grid",
+    "contents": [
+      {
+        "static": false,
+        "w": 4,
+        "moved": false,
+        "h": 2,
+        "x": 0,
+        "y": 0,
+        "i": "1",
+        "z": 0,
+        "config": {
+          "_type": "tile/data-stream",
+          "description": "Dynamic Selection on all budgets",
+          "title": "Budget Overview Tile",
+          "dataStream": {
+            "name": "budgetOverview",
+            "pluginConfigId": "{{plugin_config_id}}",
+            "sort": {
+              "by": [
+                [
+                  "name",
+                  "asc"
+                ]
+              ]
+            }
+          },
+          "visualisation": {
+            "type": "data-stream-table"
+          },
+          "scope": {
+            "query": "g.V().order().by('__name').hasNot('__canonicalType').has(\"__configId\", \"{{plugin_config_id}}\").or(__.has(\"sourceName\", \"Azure\").has(\"sourceType\", \"microsoft.consumption/budgets\")).limit(500)",
+            "bindings": {},
+            "queryDetail": {}
+          }
+        }
+      },
+      {
+        "static": false,
+        "w": 4,
+        "moved": false,
+        "h": 4,
+        "x": 0,
+        "y": 2,
+        "i": "63a00b1d-57aa-49be-b361-996e5a985330",
+        "z": 0,
+        "config": {
+          "_type": "tile/data-stream",
+          "description": "EA Lab Playground subscription selected, Dashboard Timeframe",
+          "title": "Cost by Service",
+          "dataStream": {
+            "name": "serviceCost",
+            "pluginConfigId": "{{plugin_config_id}}"
+          },
+          "visualisation": {
+            "type": "data-stream-bar-chart",
+            "config": {
+              "data-stream-bar-chart": {
+                "yAxisLabel": "",
+                "horizontalLayout": "vertical",
+                "showValue": false,
+                "showLegend": false,
+                "xAxisLabel": "",
+                "range": {
+                  "type": "auto"
+                },
+                "showGrid": true,
+                "legendPosition": "bottom",
+                "grouping": false,
+                "displayMode": "actual"
+              }
+            }
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_Pe9GSwD0BKmKVjsbRHuP))",
+            "bindings": {
+              "ids_Pe9GSwD0BKmKVjsbRHuP": [
+                "{{ea_playground_subscription}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{ea_playground_subscription}}"
+              ],
+              "types": [
+                {
+                  "value": "subscription"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "version": 9,
+    "columns": 4
+  }

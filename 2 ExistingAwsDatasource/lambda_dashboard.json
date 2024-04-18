@@ -1,0 +1,193 @@
+{
+    "_type": "layout/grid",
+    "contents": [
+      {
+        "w": 4,
+        "h": 3,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "i": "2345616c-7f08-4df5-9b11-609d9f0f8712",
+        "moved": false,
+        "static": false,
+        "config": {
+          "title": "Errors",
+          "description": "",
+          "_type": "tile/data-stream",
+          "dataStream": {
+            "name": "lambda-errors",
+            "pluginConfigId": "{{aws_datasource_id}}",
+            "group": {
+              "by": [
+                "MetricDataResults.Timestamps",
+                "byHour"
+              ],
+              "aggregate": [
+                {
+                  "names": [
+                    "MetricDataResults.Values"
+                  ],
+                  "type": "sum"
+                }
+              ]
+            }
+          },
+          "visualisation": {
+            "type": "data-stream-line-graph",
+            "config": {
+              "data-stream-line-graph": {
+                "dataPoints": true,
+                "cumulative": false,
+                "showTrendLine": true,
+                "xAxisLabel": "Errors per Hour",
+                "showLegend": false,
+                "legendPosition": "bottom",
+                "yAxisLabel": "Errors"
+              }
+            }
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_mTVlSNofk4lLQ5htb6KA))",
+            "bindings": {
+              "ids_mTVlSNofk4lLQ5htb6KA": [
+                "{{lambda_node_id}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{lambda_node_id}}"
+              ],
+              "booleanQuery": "common"
+            }
+          }
+        }
+      },
+      {
+        "w": 4,
+        "h": 3,
+        "x": 0,
+        "y": 3,
+        "z": 0,
+        "i": "7602cb92-610e-4be9-9b87-71f7965d914f",
+        "moved": false,
+        "static": false,
+        "config": {
+          "title": "Daily Duration Variance",
+          "description": "",
+          "_type": "tile/data-stream",
+          "dataStream": {
+            "name": "lambda-duration",
+            "pluginConfigId": "{{aws_datasource_id}}",
+            "group": {
+              "by": [
+                "MetricDataResults.Timestamps",
+                "byDay"
+              ],
+              "aggregate": [
+                {
+                  "names": [
+                    "MetricDataResults.Values"
+                  ],
+                  "type": "max"
+                },
+                {
+                  "names": [
+                    "MetricDataResults.Values"
+                  ],
+                  "type": "min"
+                },
+                {
+                  "names": [
+                    "MetricDataResults.Values"
+                  ],
+                  "type": "mean"
+                }
+              ]
+            }
+          },
+          "visualisation": {
+            "type": "data-stream-line-graph",
+            "config": {
+              "data-stream-line-graph": {
+                "dataPoints": false,
+                "showLegend": true,
+                "legendPosition": "bottom"
+              }
+            }
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_qrMlfg6aY29wfmpUMGRF))",
+            "bindings": {
+              "ids_qrMlfg6aY29wfmpUMGRF": [
+                "{{lambda_node_id}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{lambda_node_id}}"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "i": "589546d0-9687-47d3-bd31-33add4e759f7",
+        "x": 0,
+        "y": 6,
+        "w": 4,
+        "h": 2,
+        "config": {
+          "title": "Invocations",
+          "description": "",
+          "_type": "tile/data-stream",
+          "dataStream": {
+            "name": "lambda-invocations",
+            "pluginConfigId": "{{aws_datasource_id}}",
+            "group": {
+              "aggregate": []
+            }
+          },
+          "visualisation": {
+            "type": "data-stream-line-graph",
+            "config": {
+              "data-stream-bar-chart": {
+                "horizontalLayout": "vertical",
+                "grouping": true,
+                "showValue": false,
+                "displayMode": "actual",
+                "xAxisLabel": "",
+                "yAxisLabel": "",
+                "range": {
+                  "type": "auto"
+                },
+                "showGrid": true,
+                "showLegend": false,
+                "legendPosition": "bottom",
+                "xAxisData": "auto"
+              },
+              "data-stream-gauge": {
+                "label": "",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          },
+          "scope": {
+            "query": "g.V().has('id', within(ids_fA67FhyyzcEYpf5MLbUd))",
+            "bindings": {
+              "ids_fA67FhyyzcEYpf5MLbUd": [
+                "{{lambda_node_id}}"
+              ]
+            },
+            "queryDetail": {
+              "ids": [
+                "{{lambda_node_id}}"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "columns": 4,
+    "version": 26
+  }

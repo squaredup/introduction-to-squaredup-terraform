@@ -1,0 +1,11 @@
+[
+    {
+        "lambdaName": "global-common-api"
+    },
+    {
+        "lambdaName": "global-common-auth"
+    },
+    {
+        "lambdaName": "plugin-amazon-web-services"
+    }
+]
