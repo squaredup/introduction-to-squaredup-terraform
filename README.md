@@ -1,14 +1,24 @@
 # Getting Started with the SquaredUp Terraform Provider
-The below three examples show how you can use Infrastructure as Code (IaC) techniques to manage your SquaredUp landscape.  These examples are just to get your ideas started, and once you are rolling full documentation on the provider can be found in the [Terraform Provider Repo](https://github.com/squaredup/terraform-provider-squaredup/blob/main/docs/index.md).
 
-## Barebones Basic Dashboard
-Looking to see what the absolute minimum needed to get connected?  In about 50 lines this shows how to get your connected and create a pretty boring initial dashboard.
+Welcome to the SquaredUp Terraform Provider examples repository! Here, you will find three progressively complex demonstrations that showcase how to utilize Infrastructure as Code (IaC) techniques to effectively manage your SquaredUp dashboards and data sources. These examples are designed to spark your creativity and help you understand the possibilities with the SquaredUp Terraform provider. For comprehensive documentation, please refer to the [Terraform Provider Repo](https://github.com/squaredup/terraform-provider-squaredup/blob/main/docs/index.md).
+
+## [Barebones Basic Dashboard](./1%20BarebonesBasic/README.md)
+
+Start your journey with the essentials! This example demonstrates how to connect to SquaredUp and create a simple dashboard using minimal Terraform code. It's perfect for getting a quick start and understanding the basic capabilities of the provider.
 ![image](https://github.com/squaredup/introduction-to-squaredup-terraform/assets/17866458/b7dc3eae-1087-4872-9d7d-ff95691cf665)
 
-## Extending an Existing Data Source
-Once your partway along your journey we'll take a look at using one of the AWS data sources you've configured in SquaredUp Cloud and creating an additional dashboard via Terraform.  This demo goes one step further and uses a JSON object list to specify important Lambda Functions and then creates a dashboard for each one, in a new workspace.
+## [Extending an Existing Data Source](./2%20ExistingAwsDatasource/README.md)
+
+Take a step further by integrating an existing AWS data source. This example uses a JSON list to define important AWS Lambda functions and creates a dedicated dashboard for each within a new workspace, illustrating how to expand your infrastructure dynamically.
 ![image](https://github.com/squaredup/introduction-to-squaredup-terraform/assets/17866458/8f63b0a2-38af-4082-a414-805455389dce)
 
-## Using Variables and Deploying Data Sources
-The last demo example introduces variables to our Terraform template and deploys a new data source along the way.
+## [Using Variables and Deploying Data Sources](./3%20AzureDeployment/README.md)
+
+Discover the power of customization with this advanced example. It introduces the use of variables to streamline configurations and demonstrates deploying new Azure data sources. This setup exemplifies how to scale your configurations efficiently and securely.
 ![image](https://github.com/squaredup/introduction-to-squaredup-terraform/assets/17866458/7facb8d1-2e5d-4210-ab16-4b0477b760a9)
+
+Each example is designed to build upon the previous, providing you with a comprehensive understanding of how to leverage the SquaredUp Terraform provider to enhance and automate your monitoring landscape.
+
+## Options for Further Guidance and Support
+
+Reach out for help on [SquaredUp Community Answers](https://community.squaredup.com/).
