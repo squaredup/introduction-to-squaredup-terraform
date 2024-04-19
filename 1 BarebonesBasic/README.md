@@ -5,7 +5,7 @@ This demo provides the essentials needed to create your first dashboard via Terr
 1. [Install Terraform](https://developer.hashicorp.com/terraform/install) - Follow this guide to install Terraform on your machine.
 2. Populate the placeholders with values from your environment:
    - API key and Region in the Provider Settings: Refer to [SquaredUp Documentation](https://support.squaredup.com/hc/en-us/articles/13234653555869-API-Keys) to obtain your API key.
-   - `workspace_id` in the `squaredup_dashboard` resource: Find your workspace ID using the guide [Getting Your Workspace ID](Getting_your_workspaceId).
+   - `workspace_id` in the `squaredup_dashboard` resource: Find your workspace ID using the guide [Getting Your Workspace ID](#getting-your-workspace-id).
 3. Initialize and apply Terraform:
    - Run `terraform init` to initialize the setup. This command prepares your directory for Terraform operations.
    - Execute `terraform apply` to apply the configurations. Confirm the actions Terraform proposes before it makes changes to your infrastructure.
