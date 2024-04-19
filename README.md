@@ -6,7 +6,7 @@ Welcome to the SquaredUp Terraform Provider examples repository! Here, you will 
 Start your journey with the essentials! This example demonstrates how to connect to SquaredUp and create a simple dashboard using minimal Terraform code. It's perfect for getting a quick start and understanding the basic capabilities of the provider.
 ![image](https://github.com/squaredup/introduction-to-squaredup-terraform/assets/17866458/b7dc3eae-1087-4872-9d7d-ff95691cf665)
 
-## [Extending an Existing Data Source](./2%20ExtendingDataSource/README.md)
+## [Extending an Existing Data Source](./2%20ExistingAwsDatasource/README.md)
 Take a step further by integrating an existing AWS data source. This example uses a JSON list to define important AWS Lambda functions and creates a dedicated dashboard for each within a new workspace, illustrating how to expand your infrastructure dynamically.
 ![image](https://github.com/squaredup/introduction-to-squaredup-terraform/assets/17866458/8f63b0a2-38af-4082-a414-805455389dce)
 
