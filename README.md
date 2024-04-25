@@ -1,8 +1,10 @@
 # Getting Started with the SquaredUp Terraform Provider
 
-Welcome to the SquaredUp Terraform Provider examples repository! Here, you will find three progressively complex demonstrations that showcase how to utilize Infrastructure as Code (IaC) techniques to effectively manage your SquaredUp dashboards and data sources. These examples are designed to spark your creativity and help you understand the possibilities with the SquaredUp Terraform provider. For comprehensive documentation, please refer to the [Terraform Provider Repo](https://github.com/squaredup/terraform-provider-squaredup/blob/main/docs/index.md).  
+Welcome to the SquaredUp Terraform Provider examples repository! Here, you will find three progressively complex demonstrations that showcase how to utilize Infrastructure as Code (IaC) techniques to effectively manage your SquaredUp dashboards and data sources. These examples are designed to spark your creativity and help you understand the possibilities with the SquaredUp Terraform provider. For comprehensive documentation, please refer to the [Terraform Provider](https://registry.terraform.io/providers/squaredup/squaredup/latest/docs).  
 
 If you want to get started right away all you need to do is refer to [SquaredUp Documentation](https://support.squaredup.com/hc/en-us/articles/13234653555869-API-Keys) to obtain your API key.
+
+New to Terraform?  Check out the [Get Started Tutorials](https://developer.hashicorp.com/terraform/tutorials) on Hashicorp's page.
 
 ## [Barebones Basic Dashboard](./1%20BarebonesBasic/README.md)
 
